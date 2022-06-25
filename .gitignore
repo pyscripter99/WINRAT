@@ -1,0 +1,8 @@
+dropper.py
+dropper2.py
+dropper3.py
+*.exe
+config.json
+build/
+*.pyc
+dist/

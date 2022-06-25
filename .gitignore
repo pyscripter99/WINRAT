@@ -6,3 +6,4 @@ config.json
 build/
 *.pyc
 dist/
+htmlcov/

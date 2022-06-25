@@ -10,12 +10,12 @@ Stage 2 only has the code for sandbox detection, if all checks pass it loads sta
 ## HOW TO USE ##
 Run
 ```
-python generator.py --help
+$ python generator.py --help
 ```
 
 Examples
 
 ```
-python generator.py
-python generator.py --debug
+$ python generator.py
+$ python generator.py --debug
 ```

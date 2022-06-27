@@ -18,18 +18,25 @@ config = {}
 with open("config.json", "r") as f:
     config = json.load(f)
 
+def obfuscate(text: str):
+    compressed = zlib.compress(text.encode())
+    encoded = base64.b64encode(compressed)
+    code = f"import zlib,base64\nexec(zlib.decompress(base64.b64decode(\"{encoded.decode()}\".encode())).decode())"
+    return code
+
 def obfuscate_files(files: dict):
     for f, output in files.items():
+        if os.path.exists(output): os.remove(output)
         content = ""
         with open(f, "r") as f:
             content = f.read()
         for key, value in config.items():
             content = content.replace(key, value)
-        with open("obfuscation_temp.py", "w") as f:
-            f.write(content)
-        os.system("python pyobfx.py -f obfuscation_temp.py --pack gz")
-        os.rename("obfuscation_temp_obfx.py", output)
-        os.remove("obfuscation_temp.py")
+        with open(output, "w") as f:
+            f.write(obfuscate(content))
+        # os.system("python pyobfx.py -f obfuscation_temp.py")
+        # os.rename("obfuscation_temp_obfx.py", output)
+        # os.remove("obfuscation_temp.py")
 
 debug = args.debug
 

@@ -9,7 +9,6 @@ import os
 def environment():
     environment = [key for key in os.environ if 'VBOX' in key and not key in ["VBOX_MSI_INSTALL_PATH"]] #whitlist virtualbox installed in user (only positive if in sandbox enviroment) 
     processes = [line.split()[0 if os.name == 'nt' else -1] for line in os.popen('tasklist' if os.name == 'nt' else 'ps').read().splitlines()[3:] if line.split()[0 if os.name == 'nt' else -1].lower().split('.')[0] in ['xenservice', 'vboxservice', 'vboxtray', 'vmusrvc', 'vmsrvc', 'vmwareuser','vmwaretray', 'vmtoolsd', 'vmcompute', 'vmmem']]
-    import os
 
     # Running the aforementioned command and saving its output
     output = os.popen('wmic process get description, processid').read()

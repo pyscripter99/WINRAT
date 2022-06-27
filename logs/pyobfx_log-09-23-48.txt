@@ -1,0 +1,21 @@
+[09:23:48] [INFO] Starting obfuscator
+[09:23:48] [INFO] Extracting imports...
+[09:23:48] [INFO] Imports extracted from source.
+[09:23:48] [INFO] Escaped source file.
+[09:23:48] [INFO] Obfuscation started
+[09:23:48] [INFO] Obfuscating Names...
+[09:23:48] [INFO] Name obfuscation done.
+[09:23:48] [INFO] Obfuscated variable names
+[09:23:48] [INFO] Obfuscating Functions...
+[09:23:48] [INFO] Function obfuscation done.
+[09:23:48] [INFO] Obfuscated function names
+[09:23:48] [INFO] Obfuscating Integers...
+[09:23:48] [INFO] Integer obfuscation done.
+[09:23:48] [INFO] Obfuscating Constants...
+[09:23:48] [INFO] Constant obfuscation done.
+[09:23:48] [INFO] Obfuscating strings...
+[09:23:48] [INFO] String obfuscation done.
+[09:23:48] [INFO] Obfuscated values
+[09:23:48] [INFO] File packed. (gz)
+[09:23:48] [INFO] Successfully obfuscated.
+[09:23:48] [INFO] Saved to "obfuscation_temp_obfx.py"

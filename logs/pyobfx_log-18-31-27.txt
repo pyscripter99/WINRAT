@@ -1,0 +1,20 @@
+[18:31:27] [INFO] Starting obfuscator
+[18:31:27] [INFO] Extracting imports...
+[18:31:27] [INFO] Imports extracted from source.
+[18:31:27] [INFO] Escaped source file.
+[18:31:28] [INFO] Obfuscation started
+[18:31:28] [INFO] Obfuscating Names...
+[18:31:28] [INFO] Name obfuscation done.
+[18:31:28] [INFO] Obfuscated variable names
+[18:31:28] [INFO] Obfuscating Functions...
+[18:31:28] [INFO] Function obfuscation done.
+[18:31:28] [INFO] Obfuscated function names
+[18:31:28] [INFO] Obfuscating Integers...
+[18:31:28] [INFO] Integer obfuscation done.
+[18:31:28] [INFO] Obfuscating Constants...
+[18:31:28] [INFO] Constant obfuscation done.
+[18:31:28] [INFO] Obfuscating strings...
+[18:31:28] [INFO] String obfuscation done.
+[18:31:28] [INFO] Obfuscated values
+[18:31:28] [INFO] Successfully obfuscated.
+[18:31:28] [INFO] Saved to "dropper_obfx.py"

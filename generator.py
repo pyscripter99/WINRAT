@@ -13,12 +13,6 @@ parser.add_argument("--run_exe", metavar="run_exe", type=bool, help="Run the out
 
 args = parser.parse_args()
 
-def obfuscate(text: str):
-    compressed = zlib.compress(text.encode())
-    encoded = base64.b64encode(compressed)
-    code = f"import zlib,base64\nexec(zlib.decompress(base64.b64decode(\"{encoded.decode()}\".encode())).decode())"
-    return code
-
 print("Building with config: config.json")
 config = {}
 with open("config.json", "r") as f:
@@ -31,8 +25,11 @@ def obfuscate_files(files: dict):
             content = f.read()
         for key, value in config.items():
             content = content.replace(key, value)
-        with open(output, "w") as f:
-            f.write(obfuscate(content))
+        with open("obfuscation_temp.py", "w") as f:
+            f.write(content)
+        os.system("python pyobfx.py -f obfuscation_temp.py --pack gz")
+        os.rename("obfuscation_temp_obfx.py", output)
+        os.remove("obfuscation_temp.py")
 
 debug = args.debug
 

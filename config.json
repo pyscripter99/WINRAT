@@ -1,4 +1,4 @@
 {
-    "CONFIG_URL": "https://raw.githubusercontent.com/pyscripter99/Modules-for-WINRAT/main/modules.json",
-    "DISABLE_AV": "https://raw.githubusercontent.com/pyscripter99/Modules-for-WINRAT/main/disbale_defender.reg"
+    "CONFIG_URL": "MODULES URL",
+    "DISABLE_AV": "LINK TO DISABLE_AV.REG FILE"
 }

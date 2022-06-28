@@ -13,6 +13,7 @@ parser.add_argument("--run_exe", metavar="run_exe", type=bool, help="Run the out
 
 args = parser.parse_args()
 
+
 print("Building with config: config.json")
 config = {}
 with open("config.json", "r") as f:
